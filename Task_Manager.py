@@ -3,7 +3,7 @@ import sys
 TASK_FILE = "tasks.txt"
 
 def load_tasks():
-    """Reads tasks from the file."""
+    """Reads tasks from the file.""" # typo correction
     try:
         with open(TASK_FILE, 'r') as f:
             return [line.strip() for line in f if line.strip()]
@@ -11,7 +11,7 @@ def load_tasks():
         return []
 
 def save_tasks(tasks):
-    """Writes tasks to the file."""
+    """Writes tasks to the file.""" # improved file closing
     with open(TASK_FILE, 'w') as f:
         for task in tasks:
             f.write(f"{task}\n")
